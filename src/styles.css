@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    background: #96C2CC;
+    align-items: center;
+
+    height: 85px;
+    color: #fff;
+}
+
+.navbar__sections {
+    display: flex;
+    flex-direction: row;
+    width: 1128px;
+    justify-content: space-around;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    align-items: center;
+}
+
+.navbar__links__section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navbar__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__link a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    line-height: 19.5px;
+    font-weight: 500;
+    margin-right: 14px;
+
+}
+
+.navbar__contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.navbar__phone {
+    display: flex;
+    flex-direction: row;
+    /* margin-top: 4px; */
+    text-decoration: none;
+    color: #fff;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.navbar__email {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar__contact__icon {
+    margin-right: 4px;
+    padding-top: 2px;
+}
+
+.order__call__button {
+    width: 173px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    transition: all 0.1s ease-in-out;
+}
+
+.order__call__button:hover {
+    background: #fff;
+    color: #96C2CC;
+}

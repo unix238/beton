@@ -1,23 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './components/Icons/logo.svg';
+import email from './components/Icons/email.svg';
+import phone from './components/Icons/phone.svg';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <div className='navbar'>
+        <div className='navbar__sections'>
+          <div className='navbar__section'>
+            <img src={logo} alt='logo' />
+          </div>
+          <div className='navbar__section navbar__links__section'>
+            <div className='navbar__links'>
+              <div className='navbar__link'>
+                <a href='#'>О производстве</a>
+              </div>
+              <div className='navbar__link'>
+                <a href='#'>Продукты</a>
+              </div>
+              <div className='navbar__link'>
+                <a href='#'>Преимущества</a>
+              </div>
+
+              <div className='navbar__link'>
+                <a href='#'>Контакты</a>
+              </div>
+            </div>
+            <div className='navbar__contact'>
+              <a className='navbar__email' href='mailto:concrete@fida.kz'>
+                <div className='navbar__contact__icon'>
+                  <img src={email} alt='email' />
+                </div>
+                <p className='email__link'>concrete@fida.kz</p>
+              </a>
+              <a className='navbar__phone' href='tel:+7778 342 09 44'>
+                <div className='navbar__contact__icon'>
+                  <img src={phone} alt='phone' />
+                </div>
+                <p>8-778-342-09-44</p>
+              </a>
+            </div>
+          </div>
+          <div className='navbar__section'>
+            <div className='order__call__button'>
+              <p>Заказть звонок</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
