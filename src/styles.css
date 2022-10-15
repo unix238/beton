@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400&family=Roboto:wght@300;400;500&display=swap');
 
 * {
     margin: 0;
@@ -110,6 +110,70 @@
 }
 
 .order__call__button:hover {
+    background: #fff;
+    color: #96C2CC;
+}
+
+
+/* main */
+.main__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #96C2CC;
+    height: 90vh;
+    background: url(./components/Icons/bg.png) no-repeat;
+    background-size: cover;
+}
+
+.wrapper {
+    width: 1128px;
+}
+
+.main__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 49px;
+    text-transform: uppercase;
+    color: #fff;
+    padding-bottom: 25px;
+}
+
+.main__subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #fff;
+}
+
+.bold {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.main__button {
+    width: 367px;
+    margin-top: 36px;
+    height: 57px;
+    border: 2px solid #FFFFFF;
+    border-radius: 30px;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Roboto';
+    transition: all 0.1s ease-in-out;
+}
+
+.main__button:hover {
     background: #fff;
     color: #96C2CC;
 }

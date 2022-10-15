@@ -48,6 +48,22 @@ function App() {
           </div>
         </div>
       </div>
+      <section className='main__section'>
+        <div className='wrapper'>
+          <div className='main'>
+            <div className='main__title'>
+              <h1>Бетонный завод Fida Concrete</h1>
+            </div>
+            <div className='main__subtitle'>
+              <p>
+                Изготовим и поставим бетон всех марок{' '}
+                <span className='bold'>в любую точку Астаны за час.</span>
+              </p>
+            </div>
+            <div className='main__button'>Заказать бесплатный звонок</div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
