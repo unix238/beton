@@ -377,7 +377,8 @@ li {
 }
 
 .button__all__prices {
-    margin-top: 86px;
+    margin-bottom: 20px;
+    margin-top: 80px;
     width: 367px;
     height: 58px;
     border-radius: 30px;
@@ -398,4 +399,88 @@ li {
 .button__all__prices:hover {
     background: #162E33;
     color: #fff;
+}
+
+.reviews__section {
+    background: #96C2CC;
+    height: 480px;
+    padding-bottom: 83px;
+}
+
+.reviews__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 66px;
+}
+
+.review__item {
+    width: 367px;
+    height: 230px;
+    border-radius: 20px;
+    border: 1px solid #00000099;
+    background: #FFFFFF;
+    border: 0.51px solid rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
+    padding-left: 30px;
+}
+
+.review__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+.review__top__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.review__top__name {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    color: #141F38;
+}
+
+.review__top__position {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #141F38;
+}
+
+.review__bottom {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #141F38;
+}
+
+.reviews__main__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 25px;
+    color: #141F38;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 63px;
 }

@@ -10,6 +10,8 @@ import adv4 from './components/Icons/advantages/image4.svg';
 import adv5 from './components/Icons/advantages/image5.svg';
 import adv6 from './components/Icons/advantages/image6.svg';
 
+import photo from './components/Icons/photo.png';
+
 import beton from './components/Icons/beton.svg';
 
 import ReactImageGallery from 'react-image-gallery';
@@ -276,8 +278,70 @@ function App() {
       </section>
 
       <section className='reviews__section'>
-        <h2 className='reviews__main__title'>Отзывы</h2>
-        <div className='wrapper'></div>
+        <div className='reviews__main__title'>Отзывы наших клиентов</div>
+        <div className='wrapper'>
+          <div className='reviews__items'>
+            <div className='review__item'>
+              <div className='review__top'>
+                <div className='review__top__icon'>
+                  <img src={photo} alt='photo' />
+                </div>
+                <div className='review__top__text'>
+                  <div className='review__top__name'>Имя Фамилия</div>
+                  <div className='review__top__position'>
+                    Сотрудник BI Group, главный инженер Строительный объект: ЖК
+                    Астана
+                  </div>
+                </div>
+              </div>
+              <div className='review__bottom'>
+                Cервис на высшем уровне! Доставили за 40 минут. Спасибо! Cервис
+                на высшем уровне! Доставили за 40 минут. Спасибо! Сотрудники
+                вежливые, быстро связались и проинформировали.
+              </div>
+            </div>
+
+            <div className='review__item'>
+              <div className='review__top'>
+                <div className='review__top__icon'>
+                  <img src={photo} alt='photo' />
+                </div>
+                <div className='review__top__text'>
+                  <div className='review__top__name'>Имя Фамилия</div>
+                  <div className='review__top__position'>
+                    Сотрудник BI Group, главный инженер Строительный объект: ЖК
+                    Астана
+                  </div>
+                </div>
+              </div>
+              <div className='review__bottom'>
+                Cервис на высшем уровне! Доставили за 40 минут. Спасибо! Cервис
+                на высшем уровне! Доставили за 40 минут. Спасибо! Сотрудники
+                вежливые, быстро связались и проинформировали.
+              </div>
+            </div>
+
+            <div className='review__item'>
+              <div className='review__top'>
+                <div className='review__top__icon'>
+                  <img src={photo} alt='photo' />
+                </div>
+                <div className='review__top__text'>
+                  <div className='review__top__name'>Имя Фамилия</div>
+                  <div className='review__top__position'>
+                    Сотрудник BI Group, главный инженер Строительный объект: ЖК
+                    Астана
+                  </div>
+                </div>
+              </div>
+              <div className='review__bottom'>
+                Cервис на высшем уровне! Доставили за 40 минут. Спасибо! Cервис
+                на высшем уровне! Доставили за 40 минут. Спасибо! Сотрудники
+                вежливые, быстро связались и проинформировали.
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );
