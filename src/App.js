@@ -343,6 +343,81 @@ function App() {
           </div>
         </div>
       </section>
+
+      <section className='more__information__section'>
+        <div className='wrapper'>
+          <div className='more__information'>
+            <div className='more__information__section__main__title'>
+              На рынке более года. За это короткое время у нас...
+            </div>
+            <div className='more__information__items'>
+              <div className='more__information__item'>
+                <div className='miitem__top'>более</div>
+                <div className='miitem__center'>12</div>
+                <div className='miitem__bot'>тонн реализованного бетона</div>
+              </div>
+              <div className='more__information__item'>
+                <div className='miitem__top'>более</div>
+                <div className='miitem__center'>345</div>
+                <div className='miitem__bot'>удовлетворенных клиентов</div>
+              </div>
+              <div className='more__information__item'>
+                <div className='miitem__top'>более</div>
+                <div className='miitem__center'>67</div>
+                <div className='miitem__bot'>надежных партнеров</div>
+              </div>
+            </div>
+            <div className='more__information__section__main__title'>
+              Риски приобретения некачественного бетона
+            </div>
+
+            <div className='more__information__section__main__text'>
+              Выбор некачественного бетона может привести к разрушению вашего
+              дома. Недобросовестные производители занижают стоимость, нарушая
+              технологию производства - во вред качеству:
+              <div className='more__information__section__ul'>
+                <ul>
+                  <li>Использование отсева, вместо щебня.</li>
+                  <li>Использование марки цемента меньшей прочности.</li>
+                  <li>Ручная дозация компонентов для бетона.</li>
+                  <li>Экономия на сырье для бетонной смеси.</li>
+                  <li>
+                    Перемешивание смеси в миксере вместо бетоносместителя.
+                  </li>
+                </ul>
+              </div>
+              <div className='more__information__bottom__text'>
+                Если бетон предлагается по цене ниже рыночной, стоит обратить
+                внимание на подобные моменты.{' '}
+                <span className='underline__bold'>
+                  Обращяясь к нам вы можете быть спокойны, тем не менее мы
+                  ответим на все ваши вопросы, проконсультируем и предоставим
+                  все документы гарантирующие качество продукта.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className='contact__us__section'>
+        <div className='wrapper'>
+          <div className='form__title'>Мы Вас проконсультируем</div>
+          <div className='form__text'>
+            Заполните форму чтобы заказать обратный звонок. Наши сотрудники
+            свяжутся с Вами и проконсультируют.
+          </div>
+          <div className='inputs'>
+            <input type='name' className='input name' placeholder='Ваше имя' />
+            <input
+              type='phone'
+              className='input phone'
+              placeholder='+7(___)-___-__-__'
+            />
+          </div>
+          <div className='button__form'>Заказать обратный звонок</div>
+        </div>
+      </section>
     </div>
   );
 }
