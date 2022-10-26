@@ -29,17 +29,84 @@ import brand5 from './components/Icons/brands/5.png';
 
 import ReactImageGallery from 'react-image-gallery';
 import { useState } from 'react';
+import Modal from 'react-modal';
+import React from 'react';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 function App() {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log('dasdsada');
+    emailjs
+      .sendForm(
+        'service_nrgq5im',
+        'template_nj8cwq9',
+        form.current,
+        'kysivMeVeegptu56S'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  let subtitle;
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+  let openModal = () => {
+    setIsOpen(true);
+  };
+
+  let afterOpenModal = () => {
+    subtitle.style.color = '#f00';
+  };
+
+  let closeModal = () => {
+    setIsOpen(false);
+  };
+
+  const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      width: '550px',
+      height: '437px',
+      borderRadius: '20px',
+      display: 'flex',
+      flexDirection: 'column',
+      color: '#141F38',
+      padding: '70px',
+      overflow: 'hidden',
+    },
+  };
+
   const images = [
     {
-      original: image1,
+      original: require('./components/carousel/1.jpg'),
     },
     {
-      original: image1,
+      original: require('./components/carousel/2.jpg'),
     },
     {
-      original: image1,
+      original: require('./components/carousel/3.jpg'),
+    },
+    {
+      original: require('./components/carousel/4.jpg'),
+    },
+    {
+      original: require('./components/carousel/7.jpg'),
+    },
+    {
+      original: require('./components/carousel/8.jpg'),
     },
   ];
 
@@ -76,17 +143,17 @@ function App() {
           <div className='navbar__section navbar__links__section'>
             <div className='navbar__links'>
               <div className='navbar__link'>
-                <a href='#'>О производстве</a>
+                <a href='#about'>О производстве</a>
               </div>
               <div className='navbar__link'>
-                <a href='#'>Продукты</a>
+                <a href='#products'>Продукты</a>
               </div>
               <div className='navbar__link'>
-                <a href='#'>Преимущества</a>
+                <a href='#advantages'>Преимущества</a>
               </div>
 
               <div className='navbar__link'>
-                <a href='#'>Контакты</a>
+                <a href='#contacts'>Контакты</a>
               </div>
             </div>
             <div className='navbar__contact'>
@@ -105,8 +172,47 @@ function App() {
             </div>
           </div>
           <div className='navbar__section'>
-            <div className='order__call__button'>
+            <div className='order__call__button' onClick={openModal}>
               <p>Заказть звонок</p>
+              <div>
+                <Modal
+                  isOpen={modalIsOpen}
+                  onAfterOpen={afterOpenModal}
+                  onRequestClose={closeModal}
+                  style={customStyles}
+                  contentLabel='Call'
+                >
+                  <form ref={form} onSubmit={sendEmail} className='modal'>
+                    <div className='modal__form__text'>
+                      <div className='form__title__modal'>ЗАПОЛНИТЕ ФОРМУ</div>
+                      <div className='form__sub__title'>
+                        и мы перезвоним вам в течении 10 минут!
+                      </div>
+                    </div>
+                    <div className='form__inputs'>
+                      <div className='form__input'>
+                        <div className='form__input__title'>Ваше имя</div>
+                        <input
+                          type='name'
+                          name='user__name'
+                          className='form__input__input'
+                        />
+                      </div>
+                      <div className='form__input'>
+                        <div className='form__input__title'>Номер телефона</div>
+                        <input
+                          type='name'
+                          name='user__phone'
+                          className='form__input__input'
+                        />
+                      </div>
+                    </div>
+                    <div className='button___container'>
+                      <input type='submit' className='send__button' />
+                    </div>
+                  </form>
+                </Modal>
+              </div>
             </div>
           </div>
         </div>
@@ -123,11 +229,13 @@ function App() {
                 <span className='bold'>в любую точку Астаны за час.</span>
               </p>
             </div>
-            <div className='main__button'>Заказать бесплатный звонок</div>
+            <div className='main__button' onClick={openModal}>
+              Заказать бесплатный звонок
+            </div>
           </div>
         </div>
       </section>
-      <section className='about__factory'>
+      <section className='about__factory' id='about'>
         <div className='wrapper'>
           <div className='about__factory__parts'>
             <div className='about__factory__left'>
@@ -139,8 +247,9 @@ function App() {
                   showNav={false}
                   showBullets={true}
                   showThumbnails={false}
-                  // width='100%'
-                  // height='100%'
+                  // custom width
+                  width='100%'
+                  height='100%'
                 />
               </div>
             </div>
@@ -179,7 +288,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section className='advantages__section'>
+      <section className='advantages__section' id='advantages'>
         <h2 className='advantages__main__title'>Наши Преимущества</h2>
         <div className='wrapper'>
           <div className='advantages'>
@@ -252,7 +361,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section className='prices__section'>
+      <section className='prices__section' id='products'>
         <h2 className='prices__main__title'>Актуальная цена на бетон</h2>
         <div className='wrapper'>
           <div className='prices__items'>
@@ -266,7 +375,9 @@ function App() {
                   <div className='prices__subtitle'>От: 19030₸</div>
                 </div>
               </div>
-              <div className='prices__buy__button'>Заказать</div>
+              <div className='prices__buy__button' onClick={openModal}>
+                Заказать
+              </div>
             </div>
 
             <div className='prices__items__border'>
@@ -279,7 +390,9 @@ function App() {
                   <div className='prices__subtitle'>От: 19030₸</div>
                 </div>
               </div>
-              <div className='prices__buy__button'>Заказать</div>
+              <div className='prices__buy__button' onClick={openModal}>
+                Заказать
+              </div>
             </div>
 
             <div className='prices__items__border'>
@@ -292,7 +405,9 @@ function App() {
                   <div className='prices__subtitle'>От: 19030₸</div>
                 </div>
               </div>
-              <div className='prices__buy__button'>Заказать</div>
+              <div className='prices__buy__button' onClick={openModal}>
+                Заказать
+              </div>
             </div>
 
             <div className='prices__items__border'>
@@ -305,7 +420,9 @@ function App() {
                   <div className='prices__subtitle'>От: 19030₸</div>
                 </div>
               </div>
-              <div className='prices__buy__button'>Заказать</div>
+              <div className='prices__buy__button' onClick={openModal}>
+                Заказать
+              </div>
             </div>
           </div>
           <div className='center'>
@@ -314,7 +431,7 @@ function App() {
         </div>
       </section>
 
-      <section className='reviews__section'>
+      <section className='reviews__section' name='reviews'>
         <div className='reviews__main__title'>Отзывы наших клиентов</div>
         <div className='wrapper'>
           <div className='reviews__items'>
@@ -444,15 +561,27 @@ function App() {
             Заполните форму чтобы заказать обратный звонок. Наши сотрудники
             свяжутся с Вами и проконсультируют.
           </div>
-          <div className='inputs'>
-            <input type='name' className='input name' placeholder='Ваше имя' />
+          <form ref={form} onSubmit={sendEmail}>
+            <div className='inputs'>
+              <input
+                type='name'
+                className='input name'
+                placeholder='Ваше имя'
+                name='user__name'
+              />
+              <input
+                type='phone'
+                className='input phone'
+                placeholder='+7(___)-___-__-__'
+                name='user__phone'
+              />
+            </div>
             <input
-              type='phone'
-              className='input phone'
-              placeholder='+7(___)-___-__-__'
+              type='submit'
+              className='button__form'
+              value='Заказать обратный звонок'
             />
-          </div>
-          <div className='button__form'>Заказать обратный звонок</div>
+          </form>
         </div>
       </section>
 
@@ -561,34 +690,10 @@ function App() {
               <div className='person__name'>Иванов Иван Иванович</div>
               <div className='person__position'>Директор</div>
             </div>
-
-            <div className='person'>
-              <div className='person__img'>
-                <img src={person1} alt='' className='imgcert' />
-              </div>
-              <div className='person__name'>Иванов Иван Иванович</div>
-              <div className='person__position'>Директор</div>
-            </div>
-
-            <div className='person'>
-              <div className='person__img'>
-                <img src={person2} alt='' className='imgcert' />
-              </div>
-              <div className='person__name'>Иванов Иван Иванович</div>
-              <div className='person__position'>Директор</div>
-            </div>
-
-            <div className='person'>
-              <div className='person__img'>
-                <img src={person3} alt='' className='imgcert' />
-              </div>
-              <div className='person__name'>Иванов Иван Иванович</div>
-              <div className='person__position'>Директор</div>
-            </div>
           </div>
         </div>
 
-        <div className='reviews__main__title'>Наши партнеры</div>
+        <div className='partners__main__title'>Наши партнеры</div>
         <div className='wrapper'>
           <div className='brands'>
             <div className='brand'>
@@ -727,7 +832,7 @@ function App() {
                 </div>
               </div>
 
-              <div className='contact'>
+              <div className='contact' id='contacts'>
                 <div className='footer__right__title'>Контакты</div>
                 <div className='footer__contact'>
                   <div className='contact__icon'>

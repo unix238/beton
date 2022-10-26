@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,700;1,200;1,300;1,400&family=Roboto:wght@300;400;500&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,700;1,200;1,300;1,400&family=Roboto:wght@300;400;500&display=swap);
 @import "~react-image-gallery/styles/css/image-gallery.css";
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Montserrat, sans-serif;
 }
 
 .navbar {
@@ -102,7 +102,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    font-family: 'Roboto';
+    font-family: Roboto;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -134,7 +134,7 @@
 }
 
 .main__title {
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 700;
     font-size: 35px;
@@ -171,7 +171,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    font-family: 'Roboto';
+    font-family: Roboto;
     transition: all 0.1s ease-in-out;
 }
 
@@ -186,7 +186,7 @@
     justify-content: space-between;
     margin-top: 112px;
     margin-bottom: 115px;
-    align-items: center;
+    /* align-items: center; */
     color: #141F38;
 }
 
@@ -196,8 +196,9 @@
 }
 
 .about__factory__images {
+    margin-top: 30px;
     width: 463px;
-    height: 521px;
+    height: 321px;
 }
 
 ul {
@@ -261,7 +262,7 @@ li {
 
 .advatanges__title {
     margin-bottom: 11px;
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -275,7 +276,7 @@ li {
 }
 
 .advantages__main__title {
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 700;
     font-size: 34px;
@@ -320,7 +321,7 @@ li {
 }
 
 .prices__main__title {
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 700;
     font-size: 34px;
@@ -330,7 +331,7 @@ li {
 }
 
 .prices__title {
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -443,7 +444,7 @@ li {
 }
 
 .review__top__name {
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
     font-size: 15px;
@@ -455,7 +456,7 @@ li {
 }
 
 .review__top__position {
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 400;
     font-size: 10px;
@@ -464,7 +465,7 @@ li {
 }
 
 .review__bottom {
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
@@ -472,8 +473,20 @@ li {
     color: #141F38;
 }
 
+.partners__main__title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 25px;
+    color: #141F38;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .reviews__main__title {
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 700;
     font-size: 34px;
@@ -491,7 +504,7 @@ li {
 }
 
 .more__information__section__main__title {
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 700;
     font-size: 34px;
@@ -520,7 +533,7 @@ li {
 }
 
 .miitem__center {
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
     font-size: 100px;
@@ -532,7 +545,7 @@ li {
 }
 
 .more__information__section__main__text {
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -542,7 +555,7 @@ li {
 
 .miitem__top,
 .miitem__bot {
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
     font-size: 23px;
@@ -560,7 +573,7 @@ li {
 .underline__bold {
     text-decoration-line: underline;
     color: #141F38;
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -568,7 +581,7 @@ li {
 }
 
 .contact__us__section {
-    background: url('./components/Icons/contact.png');
+    background: url(./components/Icons/contact.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -577,7 +590,7 @@ li {
 }
 
 .form__title {
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 700;
     font-size: 34px;
@@ -590,7 +603,7 @@ li {
 }
 
 .form__text {
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -642,7 +655,7 @@ li {
     justify-content: center;
     align-items: center;
 
-    font-family: 'Roboto';
+    font-family: Roboto;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -652,7 +665,13 @@ li {
     text-align: center;
 
     color: #FFFFFF;
+    background: transparent;
 
+}
+
+.button__form:hover {
+    background: #fff;
+    color: #1C3940;
 }
 
 .accordion-title {
@@ -761,7 +780,7 @@ li {
 .reviews__main__subtitle {
     text-align: center;
     padding-top: 12px;
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 300;
     font-size: 15px;
@@ -770,7 +789,7 @@ li {
 }
 
 .person__name {
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
     font-size: 17px;
@@ -782,7 +801,7 @@ li {
 }
 
 .person__position {
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -887,7 +906,7 @@ li {
 }
 
 .footer__left__text {
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -898,7 +917,7 @@ li {
 }
 
 .left__text__bold {
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -923,7 +942,7 @@ li {
 
 .footer__link a {
     color: #fff;
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -954,7 +973,7 @@ li {
 }
 
 .footer__right__title {
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -964,4 +983,71 @@ li {
     padding-bottom: 20px;
 
     color: #FFFFFF;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    color: #141F38;
+}
+
+.form__title__modal {
+    color: #141F38;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 23px;
+}
+
+.form__sub__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    color: #141F38;
+    padding: 0;
+
+}
+
+.modal__form__text {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    justify-content: flex-start;
+    margin-bottom: 29px;
+}
+
+.form__input__title {
+    color: #96C2CC;
+    margin-bottom: 16px;
+}
+
+.form__input__input {
+    border: none;
+    border-bottom: 1px solid #162E33;
+    width: 100%;
+    margin-bottom: 29px;
+    height: 30px;
+    font-size: 16px;
+    padding-left: 7px;
+}
+
+.send__button {
+    width: 153px;
+    height: 40px;
+    background: #96C2CC;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.button___container {
+    display: flex;
+    justify-content: flex-end;
 }
