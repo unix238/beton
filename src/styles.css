@@ -389,6 +389,8 @@ li {
     align-items: center;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
+    text-decoration: none;
+    color: #162E33;
 }
 
 .center {

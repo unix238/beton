@@ -426,12 +426,21 @@ function App() {
             </div>
           </div>
           <div className='center'>
-            <div className='button__all__prices'>Скачать полный прайс</div>
+            <div>
+              <a
+                className='button__all__prices'
+                href={require('./file/Презентация_по_бетонному_заводу_141221.pdf')}
+                target={'_blank'}
+                download
+              >
+                Скачать полный прайс{' '}
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className='reviews__section' name='reviews'>
+      {/* <section className='reviews__section' name='reviews'>
         <div className='reviews__main__title'>Отзывы наших клиентов</div>
         <div className='wrapper'>
           <div className='reviews__items'>
@@ -496,7 +505,7 @@ function App() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className='more__information__section'>
         <div className='wrapper'>
@@ -720,7 +729,6 @@ function App() {
           <div className='address'>
             <div className='address__left'>
               <div className='address__left__title'>Контакты</div>
-
               <div className='address__contact' href='mailto:concrete@fida.kz'>
                 <div className='contact__icon'>
                   <svg
@@ -738,7 +746,6 @@ function App() {
                 </div>
                 <p className='email__link'>E-mail: concrete@fida.kz</p>
               </div>
-
               <div className='address__contact' href='mailto:concrete@fida.kz'>
                 <div className='contact__icon'>
                   <svg
@@ -760,7 +767,6 @@ function App() {
                   Номер телефона : 8 (778) 342-09-44
                 </p>
               </div>
-
               <div className='address__contact' href='mailto:concrete@fida.kz'>
                 <div className='contact__icon'>
                   <svg
@@ -780,9 +786,14 @@ function App() {
                   Адрес: г. Астана, район Байконыр, ул. Ш. Жиенкуловой, 22/2
                 </p>
               </div>
-              <div className='button__all__prices call'>
-                Скачать полный прайс
-              </div>
+              <a
+                className='button__all__prices call'
+                href={require('./file/Презентация_по_бетонному_заводу_141221.pdf')}
+                target={'_blank'}
+                download
+              >
+                Скачать полный прайс{' '}
+              </a>
             </div>
             <div className='address__right'>
               <iframe
